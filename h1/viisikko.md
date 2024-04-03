@@ -1,3 +1,5 @@
+# x) Lue ja tiivistä.
+
 ## Run Salt Command Locally
 
 - Salt komentoja voi ajaa paikallisesti
@@ -31,7 +33,7 @@ Create a Web Page Using Github. Terokarvinen.com. Luettavissa: https://terokarvi
 
 Raportin kirjoittaminen. Terokarvinen.com. Luettavissa: https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/. Luettu: 31.3.2024.
 
-# Salt
+# a) Hello Windows Salt World!
 
 Asensin Saltin koneelleni osoitteesta: https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/windows.html#install-windows.
 
@@ -43,7 +45,7 @@ Tämä palautti listan järjestelmän ominaisuuksia.
 
 ![salt-01](./images/salt-01.png)
 
-# Vagrant
+# b) & c) Hello Vagrant!
 
 Asensin Vagrantin osoitteesta: https://developer.hashicorp.com/vagrant/install?product_intent=vagrant.
 
@@ -69,7 +71,7 @@ Luotu virtuaalikone ilmestyi VirtualBoxiin.
 
 ![vagrant-04](./images/vagrant-04.png)
 
-## Salt asennus uuteen virtuaalikoneeseen
+# a) Asenna Salt (salt-minion) Linuxille
 
 Päivitin ensin paketinhallinnan komennolla:
 
@@ -85,7 +87,9 @@ Tarkistetaan, että salt asentui komennolla:
 
 ![salt-02](./images/salt-02.png)
 
-### pkg
+# b) Viisi tärkeintä
+
+## pkg
 
     sudo salt-call --local -l info state.single pkg.installed tree
 
@@ -93,7 +97,7 @@ Tarkistetaan, että salt asentui komennolla:
 
 Komento asensi koneelle tree:n, jos sitä ei jo ollut asennettuna. Tämä listaa tiedostohakemiston puumaisessa formaatissa.
 
-### file
+## file
 
     sudo salt-call --local -l info state.single file.managed /tmp/hellotero
 
@@ -101,7 +105,7 @@ Komento asensi koneelle tree:n, jos sitä ei jo ollut asennettuna. Tämä listaa
 
 Komento loi tekstitiedoston "hellotero" kansioon /tmp/
 
-### service
+## service
 
     sudo salt-call --local -l info state.single service.running apache2 enable=True
 
@@ -111,7 +115,7 @@ Tätä toimintoa, service.running, käytetään usein käynnistämään daemon a
 
 Virtuaalikoneella ei ollut asennettuna apache2:sta, niin tämä palautti "virheen".
 
-### user
+## user
 
     sudo salt-call --local -l info state.single user.present terote08
 
@@ -123,7 +127,7 @@ Jos käyttäjä on jo olemassa, komento palauttaa tiedot:
 
 ![salt-07](./images/salt-07.png)
 
-### cmd
+## cmd
 
     sudo salt-call --local -l info state.single cmd.run 'touch /tmp/foo' creates="/tmp/foo"
 
@@ -131,7 +135,7 @@ Jos käyttäjä on jo olemassa, komento palauttaa tiedot:
 
 Komento loi tiedoston "foo" kansioon /tmp
 
-## Idempotentti
+# c) Idempotentti & d) Tietoa koneesta.
 
     salt-call --local
 
