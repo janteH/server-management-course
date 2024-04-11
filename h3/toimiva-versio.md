@@ -1,1 +1,1 @@
-
+# x) Lue ja tiivistä
