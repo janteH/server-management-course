@@ -72,3 +72,4 @@ Init.sls tiedostoon muokkaus:
 
     sudo salt '*' state.apply project
 
+![valmis](./images/valmis.png)
