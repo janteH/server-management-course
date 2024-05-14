@@ -66,7 +66,7 @@ Projekti kansioon kopiointi:
 
 Init.sls tiedostoon muokkaus:
 
-![steam-installation](./images/steam-installation.png)
+![new-steam-installation](./images/new-steam-installation.png)
 
 ### init.sls tiedoston ajo minion koneille
 
