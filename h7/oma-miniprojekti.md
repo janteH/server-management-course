@@ -1,6 +1,8 @@
 # Oma miniprojekti
 
-Asennetaan Linux pohjaiselle koneelle sovellukset: Discord, Steam,
+Tarkoitus asentaa pelitapahtumassa käytettävät koneet.
+
+Asennetaan Linux pohjaiselle koneelle sovellukset: Discord, Steam.
 
 ### Lisenssi
 
@@ -65,4 +67,8 @@ Projekti kansioon kopiointi:
 Init.sls tiedostoon muokkaus:
 
 ![steam-installation](./images/steam-installation.png)
+
+### init.sls tiedoston ajo minion koneille
+
+    sudo salt '*' state.apply project
 
