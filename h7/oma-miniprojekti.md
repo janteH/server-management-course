@@ -73,3 +73,5 @@ Init.sls tiedostoon muokkaus:
     sudo salt '*' state.apply project
 
 ![valmis](./images/valmis.png)
+
+Lähdekoodit löytyy kirjastosta: https://github.com/janteH/project
